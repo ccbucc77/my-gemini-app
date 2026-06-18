@@ -11,7 +11,7 @@ if api_key:
     genai.configure(api_key=api_key)
     user_input = st.text_input("想对主人说什么？")
     if user_input:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(user_input)
         st.write("回应:", response.text)
 else:
